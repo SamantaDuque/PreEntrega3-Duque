@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
     <title>Contacto</title>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="/assets/img/Misterios.png" alt="Logo">
+            <img src="../assets/img/misterios.png" alt="Logo" />
         </div>
         <ul class="nav-links">
-            <a href="../index.html">Inicio</a>
-            <a href="./lugares.html">Lugares Misteriosos</a>
-            <a href="./paranormal.html">Fenómenos paranormales</a>
-            <a href="./bandidos.html">Bandidos Rurales</a>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./lugares.html">Lugares Misteriosos</a></li>
+            <li><a href="./paranormal.html">Fenómenos paranormales</a></li>
+            <li><a href="./bandidos.html">Bandidos Rurales</a></li>
         </ul>
     </nav>
 
-    <main>
-        <h1>Contacto</h1>
-        <form action="">
-            <label>Nombre</label>
-            <input />
-            <label>Mail</label>
-            <input type="email"/>
-            <label>Mensaje</label>
-            <textarea></textarea>
-            <button type="button">Enviar</button>
+    <main class="contenido">
+        <h1 class="titulo-seccion">Contacto</h1>
+
+        <form class ="contacto-formulario" action="">
+
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text"/>
+
+            <label for="email">Mail</label>
+            <input id="email" type="email"/>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje"></textarea>
+
+            <button type="submit">Enviar</button>
         </form>
+
     </main>
 
-
+    <footer>
+        <p>&copy; Todos los derechos reservados.</p>
+    </footer>
 </body>
-
-<footer>
-    <p>&copy; Todos los derechos reservados.</p>
-</footer>
 
 </html>
