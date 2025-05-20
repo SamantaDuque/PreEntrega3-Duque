@@ -1,0 +1,45 @@
+@use '../utilities/variables';
+
+
+header{
+    margin-top: 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding:10px 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+
+    .nav-links{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-left: 200px;
+        margin-right: auto;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    a {
+        font-family: variables.$font-principal;
+        font-size: 16px;
+        font-weight: 500;
+        color: variables.$color-texto;
+        text-decoration: none;
+        margin: 0 5px;
+        transition: color 0.3s;
+
+        &:hover {
+            color: variables.$color-hover;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,17 @@
+@use '../utilities/variables';
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: variables.$color-footer;
+    color: variables.$color-texto;
+    padding: 15px 20px;
+    text-align: center;
+    padding: 10px
+
+    p {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+}
