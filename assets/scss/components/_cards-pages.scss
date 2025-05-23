@@ -1,0 +1,81 @@
+@use '../utilities/variables' as variables;
+@use '../utilities/mixins' as *;
+
+@use '../base/reset';
+@use '../layout/navbar';
+@use '../layout/header';
+@use '../layout/footer';
+
+body {
+    background-color: variables.$color-primario;
+}
+
+main.contenido {
+
+    h1 {
+    margin-top: 100px;
+    font-size: variables.$titulo-xl;
+    font-weight: bold;
+    color: variables.$color-claro; 
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    @include texto-sombreado;
+    }
+}
+
+.cards-pages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+
+    @include responsive(tablet) {
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+.cards-pages {
+    background-color: variables.$color-blanco;
+    width: 350px;
+    border-radius: variables.$radio-borde;
+    overflow: hidden;
+    box-shadow: variables.$sombra;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include transition(transform);
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        display: block;
+        padding: 20px;
+        background-color: variables.$color-blanco;
+        border-radius: 8px;
+        margin-top: auto;
+    }
+
+    .texto {
+        padding: variables.$espaciado;
+        text-align: center;
+
+    h3 {
+        font-size: variables.$titulo-md;
+        margin: 1rem 0;
+        color: variables.$color-negro;
+    }
+
+    p {
+        font-size: variables.$titulo-sm;
+        color: variables.$color-negro;
+    }
+    }
+}

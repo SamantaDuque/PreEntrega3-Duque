@@ -1,0 +1,75 @@
+@use '../utilities/variables' as variables;
+@use '../utilities/mixins' as *;
+
+#articulos-recientes {
+    background-color: variables.$color-primario;
+    padding: 2rem 1rem;
+    text-align: center;
+
+    h2 {
+        color: variables.$color-blanco;
+        margin-bottom: 1rem;
+    }
+
+    .contenedor-titulo {
+        width: 30%;
+        min-width: 250px;
+        margin: 0 auto;
+        padding: variables.$espaciado;
+    }
+
+    .contenedor-articulos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+
+        @include responsive(mobile) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-inicio {
+        background-color: variables.$color-blanco;
+        width: 350px;
+        border-radius: variables.$radio-borde;
+        overflow: hidden;
+        box-shadow: variables.$sombra;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include transition(transform);
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            display: block;
+            padding: 20px;
+            background-color: variables.$color-blanco;
+            border-radius: 8px;
+            margin-top: auto;
+        }
+
+        .cards-inicio .texto {
+            padding: variables.$espaciado;
+            text-align: center;
+
+        .cards-inicio .texto h3 {
+            font-size: variables.$titulo-md;
+            margin: 1rem 0;
+            color: variables.$color-negro;
+        }
+
+        .cards-inicio .texto p{
+            font-size: variables.$titulo-sm;
+            color: variables.$color-negro;
+        }
+        }
+    }
+}
+}
