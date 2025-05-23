@@ -1,17 +1,14 @@
-@use '../utilities/variables';
+@use '../utilities/variables' as variables;
+@use '../utilities/mixins' as *;
 
 footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
     background-color: variables.$color-footer;
-    color: variables.$color-texto;
-    padding: 15px 20px;
+    color: variables.$color-blanco;
     text-align: center;
-    padding: 10px
+    padding: variables.$espaciado;
 
     p {
-        margin: 0;
-        font-size: 0.8rem;
+    margin: 0;
+    font-size: variables.$titulo-sm;
     }
 }

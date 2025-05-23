@@ -1,10 +1,22 @@
-$color-fondo: #134074;
+$color-primario: #134074;
 $color-secundario: #0e3a6e;
+$color-claro: #dddddd;
+$color-blanco: #ffffff;
+$color-negro: #000000;
 $color-hover: #00AAE4;
-$color-texto:  #ffffff;
-$color-card:  #ffffff;
-$color-form-bg: #0f3d5c;
 $color-footer: #13315c;
-$font-principal: 'Roboto', sans-serif;
-$font-secundaria: 'Open Sans', sans-serif;
-$font-destacada: 'waffle soft', serif;
+$color-boton: #8da9c4;
+
+$fuente-principal: 'Roboto', sans-serif;
+$fuente-secundaria: 'Open Sans', sans-serif;
+$fuente-titulos: 'waffle soft', serif;
+
+$titulo-xl: 3rem;
+$titulo-lg: 2rem;
+$titulo-md: 1.2rem;
+$titulo-sm: 1rem;
+
+$espaciado: 20px;
+$radio-borde: 10px;
+$sombra: 0 0 15px rgba(0, 0, 0, 0.1);
+$sombra-hover: 0 4px 8px rgba(0, 0, 0, 0.2);

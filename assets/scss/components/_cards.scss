@@ -1,0 +1,102 @@
+@use '../utilities/variables' as variables;
+@use '../utilities/mixins' as *;
+
+#articulos-recientes {
+    background-color: variables.$color-primario;
+    padding: 2rem 1rem;
+    text-align: center;
+
+    h2 {
+    color: variables.$color-blanco;
+    margin-bottom: 1rem;
+    }
+
+    .contenedor-titulo {
+    width: 30%;
+    min-width: 250px;
+    margin: 0 auto;
+    padding: variables.$espaciado;
+    }
+
+    .contenedor-articulos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    }  
+}
+
+.articulos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+.articulo, .articulos {
+    background: variables.$color-blanco;
+    border-radius: variables.$radio-borde;
+    width: 300px;
+    height: 480px;
+    box-shadow: variables.$sombra-hover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+    box-shadow: variables.$sombra-hover;
+    }
+
+    img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-top: auto;
+    }
+}
+
+.service-box, .texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: variables.$espaciado;
+}
+
+.service-box h3, .texto h3 {
+    font-size: variables.$titulo-md;
+    margin: 10px 0 20px;
+    text-align: center;
+    font-family: variables.$fuente-titulos;
+    color: variables.$color-negro;
+}
+
+.service-box p, .texto p {
+    font-size: variables.$titulo-sm;
+    color: #0a0a0a;
+    margin: 20px 0 10px;
+    flex-grow: 1;
+    font-family: variables.$fuente-secundaria;
+}
+
+.row {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: variables.$espaciado;
+    margin-bottom: variables.$espaciado;
+}
+
+.encabezado h1 {
+    text-align: center;
+    font-size: variables.$titulo-xl;
+    margin-top: variables.$espaciado;
+    color: variables.$color-blanco;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}

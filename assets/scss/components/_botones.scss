@@ -1,35 +1,24 @@
-@use '../utilities/variables';
+@use '../utilities/variables' as variables;
+@use '../utilities/mixins' as *;
 
 .button {
     display: inline-block;
-    background-color: #8da9c4;
-    color: white;
-    box-shadow: #eef4ed;
+    background-color: variables.$color-boton;
+    color: variables.$color-blanco;
     padding: 12px 24px;
+    font-family: variables.$fuente-secundaria;
     font-size: 18px;
     border-radius: 5px;
     margin-top: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
     text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 
     &:hover {
         background-color: variables.$color-hover;
     }
 }
 
-.contacto-formulario button {
-    background-color: #8da9c4;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
-    font-weight: bold;
-
-    &:hover {
-        background-color: variables.$color-hover;
-    }
+.button:active {
+    transform: scale(0.95);
 }

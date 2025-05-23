@@ -1,47 +1,11 @@
 @use 'utilities/variables';
 @use 'utilities/mixins';
-@use 'utilities/extend';
-
 @use 'base/reset';
+@use 'layout/navbar';
 @use 'layout/header';
 @use 'layout/footer';
 @use 'components/botones';
+@use 'components/cards';
+@use 'components/articulos';
+@use 'components/formulario'
 
-body {
-    background-color: variables.$color-fondo;
-    font-family: variables.$font-principal;
-}
-
-h1 {
-    font-family: variables.$font-destacada;
-    font-size: 48px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: variables.$color-texto;
-}
-
-h2,
-p {
-    font-family: variables.$font-secundaria;
-    font-size: 24px;
-    text-align: center;
-    color: #dddddd;
-    margin-bottom: 20px;
-}
-
-main.contenido {
-    margin-top: 0;
-    padding: 2rem;
-    background-color: variables.$color-secundario;
-    color: variables.$color-texto;
-
-    h1 {
-    margin-top: 100px;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 5px;
-    @include mixins.texto-sombreado;
-    }
-}

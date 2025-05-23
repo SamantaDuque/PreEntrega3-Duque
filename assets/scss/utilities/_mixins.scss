@@ -1,9 +1,19 @@
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@use '../utilities/variables' as *;
+
+
+@mixin transition($properties, $duration: 0.3s, $timing: ease) {
+    transition: $properties $duration $timing;
 }
 
 @mixin texto-sombreado {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+    @media (max-width: 600px) {@content;}
+    } @else if $breakpoint == tablet {
+    @media (max-width: 900px) {@content;}
+    }
 }
