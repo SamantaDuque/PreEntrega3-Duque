@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    background-color: variables.$color-primario; // ejemplo, cambiar si querés otro
+    background-color: variables.$color-primario; 
     border-radius: 10px;
     max-width: 400px;
     margin: 40px auto;
@@ -13,7 +13,7 @@
 
     label {
     margin-top: 10px;
-    color: variables.$color-blanco; // blanco para buen contraste
+    color: variables.$color-blanco; 
     font-size: 1.2rem;
     font-weight: bold;
     align-self: flex-start;
@@ -31,7 +31,7 @@
     color: #333;
 
     &:focus {
-      outline: 2px solid variables.$color-secundario; // efecto al foco si querés
+      outline: 2px solid variables.$color-secundario;
     }
     }
 
@@ -41,7 +41,7 @@
     }
 
     button {
-    background-color: variables.$color-boton; // usá variable o poné el color directo
+    background-color: variables.$color-boton; 
     color: variables.$color-blanco;
     padding: 10px 20px;
     border: none;
@@ -53,7 +53,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #00AAE4; // o variable si querés
+      background-color: variables.$color-hover; 
     }
-    }
+}
 }
