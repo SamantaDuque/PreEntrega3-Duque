@@ -22,54 +22,58 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 1.25rem;
+        gap: 2rem;
 
         @include responsive(mobile) {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cards-inicio {
-        background-color: variables.$color-blanco;
-        width: 350px;
-        border-radius: variables.$radio-borde;
-        overflow: hidden;
-        box-shadow: variables.$sombra;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include transition(transform);
-
-        &:hover {
-            transform: scale(1.03);
+            flex-direction: column;
+            align-items: center;
         }
 
-        img {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
-            display: block;
-            padding: 20px;
+        .cards-inicio {
             background-color: variables.$color-blanco;
-            border-radius: 8px;
-            margin-top: auto;
-        }
+            width: 350px;
+            border-radius: variables.$radio-borde;
+            overflow: hidden;
+            box-shadow: variables.$sombra;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include transition(transform);
+            padding: 1rem;
 
-        .cards-inicio .texto {
-            padding: variables.$espaciado;
-            text-align: center;
+            &:hover {
+                transform: scale(1.03);
+            }
 
-        .cards-inicio .texto h3 {
-            font-size: variables.$titulo-md;
-            margin: 1rem 0;
-            color: variables.$color-negro;
-        }
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 0;
+            }
 
-        .cards-inicio .texto p{
-            font-size: variables.$titulo-sm;
-            color: variables.$color-negro;
-        }
+            .service-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 1.5rem 1rem 1rem 1rem;
+                padding-top: 2rem;
+                text-align: center;
+
+                h3 {
+                    font-size: variables.$titulo-md;
+                    margin: 0 0 2rem 0;
+                    color: variables.$color-negro;
+                }
+
+                p {
+                    font-size: variables.$titulo-sm;
+                    margin: 0 ;
+                    color: variables.$color-negro;
+                }
+            }
         }
     }
-}
 }
