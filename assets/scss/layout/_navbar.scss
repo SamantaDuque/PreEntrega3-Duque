@@ -2,78 +2,125 @@
 @use '../utilities/mixins' as *;
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.3);
-    @include transition(background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 20px;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.3);
+  @include transition(background-color);
 
-    .logo img {
-    max-height: 40px;
-    max-width: 150px;
-    width: auto;
+  .logo {
+    img {
+      margin-top: 10px;
+      max-height: 90px;
+      max-width: 220px;
+      width: auto;
     }
+  }
 
-    .nav-links {
+.nav-links {
     display: flex;
     padding-right: 100px;
     list-style: none;
     gap: 10px;
     margin: 0 auto;
-    
+  }
+
+  a {
+    font-family: variables.$fuente-principal;
+    color: variables.$color-blanco;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: variables.$titulo-sm;
+    padding: 5px;
+    @include transition(color);
+
+    &:hover {
+      color: variables.$color-hover;
     }
+  }
 
-    a {
-        font-family: variables.$fuente-principal;    
-        color: variables.$color-blanco;
-        font-weight: 500;
-        text-decoration: none;
-        font-size: variables.$titulo-sm;
-        padding: 5px;
-        @include transition(color);
+  .menu-toggle {
+    display: none;
+  }
 
-        &:hover {
-        color: variables.$color-hover;
-    }
-    }
+  .menu-icon {
+    display: none;
+  }
 
 
-    @include responsive(tablet) {
+  @include responsive(tablet) {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
 
     .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin: 10px 0 0;
-        width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 10px 0 0;
+      width: 100%;
     }
 
     a {
-        padding: 8px 0;
+      padding: 8px 0;
     }
-    }
+  }
 
+  @include responsive(mobile) {
+     // 1. Asegura que el navbar esté en fila
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-    @include responsive(mobile) {
-    align-items: center;
+  // 2. El ícono hamburguesa a la derecha
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+    z-index: 1000;
+    margin-left: auto; // fuerza que se alinee a la derecha
+    margin-right: 10px;
 
-    .logo {
-        margin: 0 auto;
+    span {
+      background-color: variables.$color-claro;
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
     }
+  }
 
-    .nav-links {
-        align-items: center;
-        text-align: center;
+  // 3. Menu oculto por defecto
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: variables.$color-primario; // usa tu variable definida
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    z-index: 999;
+
+    li a {
+      display: block;
+      padding: 0.5rem 0;
     }
-    }
+  }
+
+  // 4. Mostrar menú si checkbox está activado
+  .menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+  }
 }

@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Misterios Argentinos</title>
+    <meta name="description" content="¿Querés contarnos una historia misteriosa o hacer una consulta? Completá el formulario de contacto y conectá con Misterios del fin del mundo.">
+    <meta name="keywords" content="contacto, Misterios del fin del mundo, formulario, historias, enviar mensaje, consulta">
+    <meta name="author" content="Misterios del fin del mundo">
     <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
-    <title>Contacto | Misterios del fin del mundo</title>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="../assets/img/misterios.png" alt="Logo" />
+            <a href="./contacto.html" title="Contacto">
+                <img src="../assets/img/logo.png" alt="Logo">
+            </a>
         </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
         <ul class="nav-links">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="./lugares.html">Lugares Misteriosos</a></li>
@@ -26,13 +39,13 @@
     <main class="contenido">
         <h1 class="titulo-seccion">Contacto</h1>
 
-        <form class ="contacto-formulario" action="">
+        <form class="contacto-formulario" action="">
 
             <label for="nombre">Nombre</label>
-            <input id="nombre" type="text"/>
+            <input id="nombre" type="text" />
 
             <label for="email">Mail</label>
-            <input id="email" type="email"/>
+            <input id="email" type="email" />
 
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje"></textarea>
